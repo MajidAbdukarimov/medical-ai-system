@@ -5,7 +5,7 @@
 **Date**: September 04, 2025
 **Team Members**: [Your Names Here]
 **Instructor**: [Instructor Name]
-**Project Repository**: https://github.com/yourusername/medical-ai-system
+**Project Repository**: https://github.com/MajidAbdukarimov/medical-ai-system
 
 ---
 
