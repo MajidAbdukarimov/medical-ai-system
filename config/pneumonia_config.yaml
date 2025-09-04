@@ -1,0 +1,26 @@
+# config/pneumonia_config.yaml
+experiment_name: "pneumonia_fast_training"
+seed: 42
+
+data:
+  train_csv: "data/pneumonia_train.csv"
+  val_csv: "data/pneumonia_val.csv"
+  test_csv: "data/pneumonia_test.csv"
+  img_dir: "data/chest_xray"
+  batch_size: 32  # Можно увеличить для скорости
+  num_workers: 2
+
+model:
+  backbone: "resnet18"  # Легче чем resnet50
+  num_classes: 14  # Оставляем для совместимости
+  pretrained: false  # Быстрее без pretrained
+  use_attention: false
+  dropout_rate: 0.5
+
+training:
+  num_epochs: 10  # Достаточно для демонстрации
+  learning_rate: 0.001  # Можно больше для быстрого обучения
+  weight_decay: 0.0001
+  gradient_accumulation_steps: 1  # Быстрее без накопления
+  max_grad_norm: 1.0
+  early_stopping_patience: 3
